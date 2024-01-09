@@ -391,7 +391,7 @@ extension RSSelectionMenu {
     // check if show rightBarButton
     fileprivate func showRightBarButton() -> Bool {
         switch menuPresentationStyle {
-        case .present, .push:
+        case .present, .push, .popover:
             return (tableView?.selectionStyle == .multiple || !self.dismissAutomatically)
         default:
             return false
